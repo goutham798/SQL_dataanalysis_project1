@@ -247,6 +247,7 @@ This project demonstrates proficiency in:
 
 # Repository Structure
 
+```text
 SQL_dataanalysis_project1/
 │
 ├── datasets/
@@ -262,7 +263,7 @@ SQL_dataanalysis_project1/
 │   └── DA_Project1_clean.sql
 │
 └── README.md
-
+```
 # Author
 
 ## Goutham S
