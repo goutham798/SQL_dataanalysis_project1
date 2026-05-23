@@ -1,52 +1,175 @@
-# SQL_dataanalysis_project1
-
-# SQL Sales Data Analysis Project
+# SQL Sales & Exploratory Data Analysis Project
 
 ## Project Overview
 
-This project focuses on analyzing sales, customer behavior, and product performance using MySQL.
+This project focuses on performing comprehensive sales data analysis and exploratory data analysis (EDA) using MySQL.
 
-The objective of the project is to transform raw sales data into meaningful business insights through SQL queries, analytical reporting, and performance tracking techniques.
+The objective of the project is to transform raw transactional data into meaningful business insights through SQL queries, analytical reporting, KPI tracking, segmentation analysis, and trend analysis.
 
-The project demonstrates practical SQL skills used in real-world data analyst roles, including:
-- Data cleaning
-- Data aggregation
-- Business KPI analysis
-- Customer segmentation
-- Product performance evaluation
-- Trend analysis
-- Window functions
-- Report generation
+The project combines:
+- Exploratory Data Analysis (EDA)
+- Business KPI Reporting
+- Customer Analytics
+- Product Performance Analysis
+- Sales Trend Analysis
+- Segmentation Analysis
+- Reporting Views
 
----
-
-## Tables Used
-
-### 1. `fact_sales`
-Contains transactional sales data.
-
-### 2. `dim_customers`
-Contains customer-related information.
-
-### 3. `dim_products`
-Contains product-related information.
+The project demonstrates practical SQL skills commonly used in real-world data analyst and business intelligence roles.
 
 ---
 
-# Project Analysis Included
+# Project Objectives
 
-## 1. Change Over Time Analysis
+The main goals of this project are:
 
-### Objective
-Analyze how sales change over time.
+- Explore and understand the dataset structure
+- Analyze customer behavior and purchasing trends
+- Evaluate product and category performance
+- Generate business KPIs
+- Perform trend and time-series analysis
+- Build customer and product reports
+- Apply advanced SQL analytical techniques
 
-### Analysis Performed
+---
+
+# Database Tables Used
+
+## 1. `fact_sales`
+Contains transactional sales records.
+
+## 2. `dim_customers`
+Contains customer demographic and profile information.
+
+## 3. `dim_products`
+Contains product and category information.
+
+---
+
+# Project Sections
+
+# 1. Database Exploration
+
+## Objective
+Understand the database structure and available objects.
+
+## Analysis Performed
+- Explore database tables
+- Explore table columns
+- Inspect dataset structure
+
+## SQL Concepts Used
+- `information_schema.tables`
+- `information_schema.columns`
+
+---
+
+# 2. Dimension Exploration
+
+## Objective
+Understand customer and product dimensions.
+
+## Analysis Performed
+- Explore customer countries
+- Explore product categories and subcategories
+- Analyze product catalog structure
+
+## SQL Concepts Used
+- `DISTINCT`
+- `ORDER BY`
+
+---
+
+# 3. Date Exploration
+
+## Objective
+Analyze date ranges and customer age information.
+
+## Analysis Performed
+- Find first and last sales dates
+- Calculate business operational timeline
+- Find youngest and oldest customers
+
+## SQL Concepts Used
+- `MIN()`
+- `MAX()`
+- `TIMESTAMPDIFF()`
+- Date Functions
+
+---
+
+# 4. Measure Exploration
+
+## Objective
+Generate core business KPIs.
+
+## Analysis Performed
+- Total sales
+- Total quantity sold
+- Average selling price
+- Total orders
+- Total products
+- Total customers
+- Business KPI summary report
+
+## SQL Concepts Used
+- `SUM()`
+- `AVG()`
+- `COUNT()`
+- `UNION ALL`
+
+---
+
+# 5. Magnitude Analysis
+
+## Objective
+Analyze business performance distribution across dimensions.
+
+## Analysis Performed
+- Customers by country
+- Customers by gender
+- Products by category
+- Average product cost per category
+- Revenue by category
+- Revenue by customer
+- Product sales distribution across countries
+
+## SQL Concepts Used
+- `GROUP BY`
+- Aggregate Functions
+- Joins
+
+---
+
+# 6. Rank Analysis
+
+## Objective
+Identify top and bottom business performers.
+
+## Analysis Performed
+- Top 5 revenue-generating products
+- Lowest-performing products
+- Customers with the fewest orders
+
+## SQL Concepts Used
+- Window Functions
+- `ROW_NUMBER()`
+- Ranking Analysis
+
+---
+
+# 7. Change Over Time Analysis
+
+## Objective
+Analyze sales performance over time.
+
+## Analysis Performed
 - Monthly sales trends
 - Running cumulative sales
 - Sales growth tracking
 - Time-series analysis
 
-### SQL Concepts Used
+## SQL Concepts Used
 - `GROUP BY`
 - `SUM()`
 - Window Functions
@@ -55,50 +178,50 @@ Analyze how sales change over time.
 
 ---
 
-## 2. Cumulative Sales Analysis
+# 8. Cumulative Sales Analysis
 
-### Objective
-Track cumulative sales performance over time.
+## Objective
+Track cumulative business performance.
 
-### Analysis Performed
+## Analysis Performed
 - Running total sales
 - Progressive revenue tracking
 - Monthly cumulative growth
 
-### SQL Concepts Used
+## SQL Concepts Used
 - Window Functions
 - `SUM() OVER()`
 
 ---
 
-## 3. Moving Average Analysis
+# 9. Moving Average Analysis
 
-### Objective
-Smooth sales fluctuations and identify trends.
+## Objective
+Smooth fluctuations and identify sales trends.
 
-### Analysis Performed
+## Analysis Performed
 - Monthly average price
-- Moving average price trend
+- Moving average trend analysis
 - Trend stabilization analysis
 
-### SQL Concepts Used
+## SQL Concepts Used
 - `AVG()`
 - Window Functions
 
 ---
 
-## 4. Product Performance Analysis
+# 10. Product Performance Analysis
 
-### Objective
-Evaluate yearly product performance.
+## Objective
+Evaluate yearly product sales performance.
 
-### Analysis Performed
-- Compare current sales with average sales
-- Compare current sales with previous year sales
-- Identify increasing and decreasing product performance
-- Year-over-year growth analysis
+## Analysis Performed
+- Compare yearly sales to average product sales
+- Compare yearly sales with previous year performance
+- Identify increasing and decreasing product trends
+- Year-over-year analysis
 
-### SQL Concepts Used
+## SQL Concepts Used
 - CTEs
 - `LAG()`
 - Window Functions
@@ -106,57 +229,58 @@ Evaluate yearly product performance.
 
 ---
 
-## 5. Part-to-Whole Analysis
+# 11. Part-to-Whole Analysis
 
-### Objective
-Understand category contribution to total revenue.
+## Objective
+Understand category contribution to total business revenue.
 
-### Analysis Performed
-- Category-wise total sales
-- Percentage contribution to overall sales
-- Revenue distribution analysis
+## Analysis Performed
+- Category-wise sales contribution
+- Percentage contribution analysis
+- Revenue distribution tracking
 
-### SQL Concepts Used
+## SQL Concepts Used
 - Window Functions
 - Aggregate Functions
 - Percentage Calculations
 
 ---
 
-## 6. Product Segmentation Analysis
+# 12. Product Segmentation Analysis
 
-### Objective
+## Objective
 Segment products based on cost ranges.
 
-### Analysis Performed
-Products classified into:
+## Analysis Performed
+
+### Product Segments
 - Below 100
 - 100–500
 - 500–1000
 - Above 1000
 
-### SQL Concepts Used
+## SQL Concepts Used
 - CASE Statements
 - Aggregations
 
 ---
 
-## 7. Customer Segmentation Analysis
+# 13. Customer Segmentation Analysis
 
-### Objective
-Classify customers based on spending behavior and purchase history.
+## Objective
+Classify customers based on purchasing behavior and lifespan.
 
-### Customer Categories
+## Customer Categories
 - VIP Customers
 - Regular Customers
 - New Customers
 
-### Segmentation Rules
+## Segmentation Rules
 - VIP → Lifespan >= 12 months and spending > 5000
 - Regular → Lifespan >= 12 months and spending <= 5000
 - New → Lifespan < 12 months
 
-### SQL Concepts Used
+## SQL Concepts Used
 - CTEs
 - `TIMESTAMPDIFF()`
 - CASE Statements
@@ -164,12 +288,12 @@ Classify customers based on spending behavior and purchase history.
 
 ---
 
-## 8. Customer Report Generation
+# 14. Customer Report Generation
 
-### Objective
-Create a consolidated customer analytics report.
+## Objective
+Build a consolidated customer analytics report.
 
-### Metrics Included
+## Metrics Included
 - Total orders
 - Total sales
 - Total quantity purchased
@@ -181,7 +305,7 @@ Create a consolidated customer analytics report.
 - Age groups
 - Customer segments
 
-### SQL Concepts Used
+## SQL Concepts Used
 - Views
 - CTEs
 - Aggregate Functions
@@ -189,12 +313,12 @@ Create a consolidated customer analytics report.
 
 ---
 
-## 9. Product Report Generation
+# 15. Product Report Generation
 
-### Objective
-Create a product-level business performance report.
+## Objective
+Build a product-level business performance report.
 
-### Metrics Included
+## Metrics Included
 - Total orders
 - Total sales
 - Total quantity sold
@@ -206,12 +330,12 @@ Create a product-level business performance report.
 - Average monthly revenue
 - Product performance category
 
-### Product Categories
+## Product Categories
 - High-Performers
 - Mid-Range
 - Low-Performers
 
-### SQL Concepts Used
+## SQL Concepts Used
 - Views
 - CTEs
 - Window Functions
@@ -230,9 +354,12 @@ This project demonstrates proficiency in:
 - CASE Statements
 - Date Functions
 - Views
-- KPI Calculations
-- Business Analysis
+- KPI Reporting
 - Data Segmentation
+- Ranking Analysis
+- Time-Series Analysis
+- Business Analysis
+- Exploratory Data Analysis (EDA)
 - Analytical Reporting
 
 ---
@@ -248,7 +375,7 @@ This project demonstrates proficiency in:
 # Repository Structure
 
 ```text
-SQL_dataanalysis_project1/
+SQL_sales_eda_project/
 │
 ├── datasets/
 │   ├── dim_customers.csv
@@ -256,18 +383,46 @@ SQL_dataanalysis_project1/
 │   └── fact_sales.csv
 │
 ├── docs/
-│   ├── DA_database_creation_pro1.sql
-│   ├── analysis_queries.sql
-│   ├── customer_report_pro1.sql
-│   ├── Product_report_pro1.sql
-│   └── DA_Project1_clean.sql
+│   ├── database_creation.sql
+│   ├── exploratory_data_analysis.sql
+│   ├── sales_analysis.sql
+│   ├── customer_report.sql
+│   ├── product_report.sql
+│   └── final_clean_project.sql
 │
 └── README.md
 ```
+
+---
+
+# Key Business Insights Generated
+
+- Identified top-performing products and categories
+- Tracked monthly sales growth trends
+- Evaluated customer purchasing behavior
+- Segmented customers based on value and loyalty
+- Generated business KPI dashboards using SQL
+- Measured category contribution to total revenue
+- Evaluated product sales performance over time
+
+---
+
+# Learning Outcomes
+
+Through this project, I improved skills in:
+
+- Writing advanced SQL queries
+- Solving business problems with SQL
+- Building analytical reports
+- Using window functions effectively
+- Performing exploratory data analysis
+- Creating reusable SQL views
+- Understanding real-world business metrics
+
+---
+
 # Author
 
 ## Goutham S
 
 Aspiring Data Analyst focused on SQL, business analytics, and data visualization projects.
-
----
