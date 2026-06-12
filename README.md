@@ -46,24 +46,6 @@ Contains product and category information.
 
 ---
 
-# Project Sections
-
-# 1. Database Exploration
-
-## Objective
-Understand the database structure and available objects.
-
-## Analysis Performed
-- Explore database tables
-- Explore table columns
-- Inspect dataset structure
-
-## SQL Concepts Used
-- `information_schema.tables`
-- `information_schema.columns`
-
----
-
 # 2. Dimension Exploration
 
 ## Objective
@@ -74,12 +56,6 @@ Understand customer and product dimensions.
 - Explore product categories and subcategories
 - Analyze product catalog structure
 
-## SQL Concepts Used
-- `DISTINCT`
-- `ORDER BY`
-
----
-
 # 3. Date Exploration
 
 ## Objective
@@ -89,12 +65,6 @@ Analyze date ranges and customer age information.
 - Find first and last sales dates
 - Calculate business operational timeline
 - Find youngest and oldest customers
-
-## SQL Concepts Used
-- `MIN()`
-- `MAX()`
-- `TIMESTAMPDIFF()`
-- Date Functions
 
 ---
 
